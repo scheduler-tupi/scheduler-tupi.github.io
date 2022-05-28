@@ -1,104 +1,127 @@
-import { Form, Select, InputNumber, Switch, Slider, Button } from 'antd'
+import { MehTwoTone } from "@ant-design/icons";
+import { Row, Col, Layout, Card, Space } from "antd";
 
-// Custom DatePicker that uses Day.js instead of Moment.js
-import DatePicker from '../components/DatePicker'
+const { Header, Footer, Sider, Content } = Layout;
 
-import { SmileFilled } from '@ant-design/icons'
-
-import Link from 'next/link'
-
-const FormItem = Form.Item
-const Option = Select.Option
+import Link from "next/link";
 
 const content = {
-  marginTop: '100px',
-}
+  marginLeft: "5em",
+  marginRight: "5em",
+  marginTop: "5em",
+};
 
 export default function Home() {
   return (
-    <div style={content}>
-      <div className="text-center mb-5">
-        <Link href="#">
-          <a className="logo mr-0">
-            <SmileFilled size={48} strokeWidth={1} />
-          </a>
-        </Link>
-
-        <p className="mb-0 mt-3 text-disabled">Welcome to the world !</p>
-      </div>
-      <div>
-        <Form layout="horizontal">
-          <FormItem
-            label="Input Number"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 8 }}
-          >
-            <InputNumber
-              size="large"
-              min={1}
-              max={10}
-              style={{ width: 100 }}
-              defaultValue={3}
-              name="inputNumber"
-            />
-          </FormItem>
-
-          <FormItem
-            label="Switch"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 8 }}
-          >
-            <Switch defaultChecked name="switch" />
-          </FormItem>
-
-          <FormItem
-            label="Slider"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 8 }}
-          >
-            <Slider defaultValue={70} />
-          </FormItem>
-
-          <FormItem
-            label="Select"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 8 }}
-          >
-            <Select
-              size="large"
-              defaultValue="lucy"
-              style={{ width: 192 }}
-              name="select"
-            >
-              <Option value="jack">jack</Option>
-              <Option value="lucy">lucy</Option>
-              <Option value="disabled" disabled>
-                disabled
-              </Option>
-              <Option value="yiminghe">yiminghe</Option>
-            </Select>
-          </FormItem>
-
-          <FormItem
-            label="DatePicker"
-            labelCol={{ span: 8 }}
-            wrapperCol={{ span: 8 }}
-          >
-            <DatePicker name="startDate" />
-          </FormItem>
-          <FormItem
-            style={{ marginTop: 48 }}
-            wrapperCol={{ span: 8, offset: 8 }}
-          >
-            <Button size="large" type="primary" htmlType="submit">
-              OK
-            </Button>
-            <Button size="large" style={{ marginLeft: 8 }}>
-              Cancel
-            </Button>
-          </FormItem>
-        </Form>
-      </div>
-    </div>
-  )
+    <Layout>
+      <Header>
+        <Row>
+          <Col span={6}>Logo</Col>
+          <Col span={18}>
+            <Row>
+              <Col span={12}></Col>
+              <Col span={4}>
+                <a href="#description_section">CONHEÇA</a>
+              </Col>
+              <Col span={4}>
+                <a href="#contato">PREÇOS</a>
+              </Col>
+              <Col span={4}>
+                <a href="#contato">FALE CONOSCO</a>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Header>
+      <Content style={{ paddingLeft: 50, paddingRight: 50 }}>
+        <Row style={{ height: "100vh", alignItems: "center" }}>
+          <Col span={24}>
+            <h1 className="header--title">UMA AGENDA SIMPLES E AUTOMATIZADA</h1>
+            <h2 className="header--subtitle">SEJA UM VENDEDOR ATIVO</h2>
+            <a href="#contato">Saiba mais</a>
+          </Col>
+        </Row>
+        <Row style={{ height: "50vh", alignItems: "center" }}>
+          <Col span={24}>
+            <h1 className="section-title" id="description_section">
+              O problema
+            </h1>
+            <div className="site-card-wrapper">
+              <Row gutter={16}>
+                <Col span={8}>
+                  <Card title="Rotatividade de clientes" bordered={false}>
+                    <p>
+                      <MehTwoTone style={{ fontSize: "40px", color: "#08c" }} />
+                    </p>
+                    <p>
+                      CLIENTES DEIXAm DE COMPRAR, E NÃO PERCEBEMOS, JÁ QUE ISSO
+                      FICA "CAMUFLADO" EM MEIO A UMA GRANDE CARTEIRA DE
+                      CLIENTES.
+                    </p>
+                  </Card>
+                </Col>
+                <Col span={8}>
+                  <Card
+                    title="Pouca proatividade no pós venda"
+                    bordered={false}
+                  >
+                    <p>
+                      <MehTwoTone style={{ fontSize: "40px", color: "#08c" }} />
+                    </p>
+                    <p>
+                      CONCORRENTES ENCONTRAM PORTAS DE ENTRADA, JÁ QUE NÃO
+                      Conseguimos MANTER UM RELACIONAMENTO RECORRENTE COM O
+                      CLIENTE.
+                    </p>
+                  </Card>
+                </Col>
+                <Col span={8}>
+                  <Card title="Um outro problema" bordered={false}>
+                    <p>
+                      <MehTwoTone style={{ fontSize: "40px", color: "#08c" }} />
+                    </p>
+                    <p>
+                      CONCORRENTES ENCONTRAM PORTAS DE ENTRADA, JÁ QUE NÃO
+                      Conseguimos MANTER UM RELACIONAMENTO RECORRENTE COM O
+                      CLIENTE.
+                    </p>
+                  </Card>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+        <Row style={{ height: "25vh", alignItems: "center" }}>
+          <Col span={24}>
+            <h1 className="section-title">A solução</h1>
+            <div className="site-card-wrapper">
+              <Row>
+                <Col span={24} style={{ textAlign: "center" }} gutter={16}>
+                  <h3 style={{ width: "100%" }}>
+                    AUTOMATIZAMOS O AGENDAMENTO DE CONTATOS, DE MANEIRA SIMPLES
+                    E DESCOMPLICADA. FEITO PARA VOCÊ QUE TEM POUCO TEMPO
+                    DISPONÍVEL.
+                  </h3>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+        <Row
+          style={{
+            height: "50vh",
+            alignItems: "center",
+          }}
+        >
+          <Col span={24} style={{ textAlign: "center" }}>
+            <h1>Contato</h1>
+            <h2>SEJA UM VENDEDOR ATIVO</h2>
+            <p>Quero automatizar meu pós venda</p>
+            <a id="contato">Entrar em contato</a>
+          </Col>
+        </Row>
+      </Content>
+      <Footer style={{ textAlign: "center" }}>® Refresca Cuca - 2022</Footer>
+    </Layout>
+  );
 }
