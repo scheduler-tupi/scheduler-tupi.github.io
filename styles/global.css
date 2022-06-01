@@ -23,26 +23,71 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.header--title {
-  font-size: 50px;
-  margin:0;
+
+.button--action {
+  background-color: var(--primaryColor);
+  padding: 20px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 700;
+  width: 160px;
+  text-align: center;
 }
-.header--subtitle{
-  font-size: 35px;
-  font-weight: 300;
+
+.button--action:hover {
+  background-color: var(--primaryColor);
+}
+
+.nav--link{
+  /* background-color: var(--primaryColor); */
+  font-weight: 700;
 }
 
 main {
   background-color: var(--backgroundColor);
 }
 
-header {
+footer {
   background-color: var(--backgroundColor)!important;
 }
 
-footer {
-  background-color: var(--backgroundColor)!important;
-  
+/* ------------ HEADER ------------ */
+
+.header--title {
+  font-size: 54px;
+  font-weight: 900;
+  margin: 0;
+  color: var(--textColorPrimary)
+}
+
+.header--subtitle{
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--textColorPrimary)
+}
+
+.header--config{
+  background-color: var(--tertiaryColor);
+}
+
+.color--marker--primary{
+  color: var(--primaryColor)
+}
+
+header {
+  background-color: var(--backgroundColor);
+}
+
+.navbar--top{
+  background-color: var(--tertiaryColor)!important;
+}
+/* ------------ HEADER ------------ */
+
+
+.footer--top{
+  background-color: var(--tertiaryColor)!important;
+
 }
 
 .text-left {
