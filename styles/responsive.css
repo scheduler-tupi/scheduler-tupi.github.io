@@ -20,6 +20,9 @@
     .rsp--zero--height {
         height: none!important;
     }
+    .rsp--width--img{
+        width: 300px;
+    }
 }
  
 /* Small screen devices (600px and above) */

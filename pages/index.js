@@ -8,16 +8,20 @@ import {
 
 const { Header, Footer, Sider, Content } = Layout;
 
-import Link from "next/link";
-import Image from "next/image";
-
 export default function Home() {
   return (
     <Layout>
       <Header className="navbar--top" breakpoint="lg">
         <Row>
           <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-            <Image src="/logo-fav.png" layout="fill" />
+            <img
+              src="logo-fav.png"
+              layout="fill"
+              className="rsp--width--img"
+              style={{
+                width: "395px",
+              }}
+            />
           </Col>
 
           <Col xs={24} sm={24} md={18} lg={18} xl={18}>
